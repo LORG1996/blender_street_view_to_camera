@@ -2,82 +2,82 @@
 
 ![StreetView To Camera Preview](image_0.png)
 
-> **Автори:** Gemini (AI), [Ваше Ім'я/Нікнейм]
-> **Версія:** 1.7 (Stable)
-> **Сумісність:** Blender v4.0+
+> **Authors:** Gemini (AI), [Your Name/Nickname optional]
+> **Version:** 1.7 (Stable)
+> **Compatibility:** Blender v4.0+
 
-**StreetView To Camera** — це потужний аддон для Blender, розроблений спеціально для архітекторів, візуалізаторів та 3D-художників, які працюють із геоданими. Він дозволяє миттєво створити камеру в Blender, яка ідеально повторює ракурс, позицію та кут огляду (FOV) реальної панорами Google Street View.
+**StreetView To Camera** is a powerful Blender add-on designed specifically for architects, visualizers, and 3D artists working with geospatial data. It allows you to instantly create a Blender camera that perfectly matches the perspective, position, and Field of View (FOV) of a real-world Google Street View panorama.
 
-Головна особливість — **автоматичний розрахунок FOV**. Google Maps надає вертикальний кут огляду панорами. Цей аддон автоматично вираховує правильний *горизонтальний* кут огляду, базуючись на співвідношенні сторін вашого скріншоту. Це забезпечує ідеальний збіг 3D-геометрії (наприклад, імпортованої через Blosm) із фоновим зображенням.
-
----
-
-## ⚡️ Ключові можливості
-
-1.  **Прямий імпорт ракурсу:** Створює камеру з точними координатами (Lat/Lon/Z), Heading (поворотом) та Pitch (нахилом), отриманими з Google URL.
-2.  **Розумний FOV:** Автоматично перераховує вертикальний FOV Google (`75y`) у горизонтальний FOV Blender, адаптуючись під роздільну здатність скріншоту (наприклад, `1866x1076` перетвориться на точні `111°`).
-3.  **Авто-налаштування фону:** Автоматично завантажує скріншот як фонове зображення камери (`Background Image`), встановлює прозорість 0.5 та підганяє роздільну здатність рендеру під скріншот.
-4.  **Зв'язок із Blosm:** Можливість вставити координати рамки BBox (Bounding Box) безпосередньо з аддону Blosm для точного позиціонування камери відносно центру вашого 3D-світу.
+The standout feature is **Automatic FOV Calculation**. Google Maps provides the vertical FOV of the panorama. This add-on automatically calculates the correct *horizontal* FOV based on the aspect ratio of your screenshot. This ensures a perfect match between your 3D geometry (e.g., imported via Blosm) and the background image.
 
 ---
 
-## 🚀 Встановлення
+## ⚡️ Key Features
 
-### Крок 1: Завантаження
-Завантажте файл `streetview_to_camera.py` з цього репозиторію.
-
-### Крок 2: Встановлення в Blender
-1.  У Blender перейдіть до `Edit` > `Preferences` > `Add-ons`.
-2.  Натисніть кнопку **Install...** у верхньому правому куті.
-3.  Виберіть завантажений файл `streetview_to_camera.py`.
-4.  Увімкніть чекбокс навпроти **"Add Mesh: StreetView To Camera"**.
+1.  **Direct Perspective Import:** Creates a camera with precise coordinates (Lat/Lon/Z), Heading (yaw), and Pitch derived directly from the Google URL.
+2.  **Smart FOV:** Automatically recalculates Google's vertical FOV (`75y`) into Blender's horizontal FOV, adapting to your screenshot's resolution (e.g., `1866x1076` resolution results in a precise `111°` FOV).
+3.  **Auto Background Setup:** Instantly loads your screenshot as the camera's **Background Image**, sets alpha to 0.5, and matches Blender's render resolution to the screenshot's dimensions.
+4.  **Blosm Integration:** Allows you to paste BBox (Bounding Box) coordinates directly from the Blosm add-on for accurate camera positioning relative to your 3D world origin.
 
 ---
 
-## 🛠 Робочий процес (Як користуватися)
+## 🚀 Installation
 
-Цей аддон найкраще працює у зв'язці з аддоном **Blosm for Blender** (для імпорту 3D-будівель) та постійним файлом скріншоту.
+### Step 1: Download
+Download the `streetview_to_camera.py` file from this repository.
 
-### 1. Налаштування папки для скріншотів (Один раз)
-Для швидкої роботи налаштуйте вашу програму для скріншотів ( ShareX, Lightshot, стандартний Snipping Tool тощо) так, щоб при натисканні гарячої клавіші скріншот автоматично зберігався в одну папку під одним іменем, наприклад: `C:\Screenshots\maps_sync.png`. Старий файл має перезаписуватись.
-
-### 2. У Blender (Підготовка)
-1.  Використовуйте **Blosm**, щоб імпортувати 3D-будівлі та місцевість потрібної локації.
-2.  Скопіюйте координати рамки (BBox) з Blosm.
-
-### 3. Налаштування аддону StreetView
-1.  Відкрийте закладку **StreetView** в N-панелі (Sidebar праворуч).
-2.  Натисніть **"Paste from Blosm"**, щоб вставити координати рамки.
-3.  У полі **"Image Path"** виберіть ваш постійний файл скріншоту `C:\Screenshots\maps_sync.png`.
-
-### 4. Синхронізація
-1.  **У браузері:** Відкрийте Google Street View, знайдіть потрібний ракурс.
-2.  **Скріншот:** Натисніть PrintScreen (файл `maps_sync.png` оновився на диску).
-3.  **URL:** Скопіюйте посилання з адресного рядка браузера.
-4.  **У Blender:** Вставте посилання в поле **"Google URL"** аддону та натисніть **"Створити камеру"**.
-
-*Аддон миттєво створить камеру в точних координатах, нахилить її та завантажить оновлений скріншот як фон. 3D-будівлі ідеально збіжуться з фото.*
+### Step 2: Install in Blender
+1.  In Blender, go to `Edit` > `Preferences` > `Add-ons`.
+2.  Click the **Install...** button in the top right corner.
+3.  Select the downloaded `streetview_to_camera.py` file.
+4.  Enable the checkbox next to **"Add Mesh: StreetView To Camera"**.
 
 ---
 
-## 🧩 Технічні деталі (Математика FOV)
+## 🛠 Workflow (How to Use)
 
-Google надає дані у форматі `@lat,lon,x,fy,h,t`. Ключовим параметром є `fy` — Вертикальний кут огляду (Field of View).
+This add-on works best when paired with the **Blosm for Blender** add-on (for importing 3D buildings) and a dedicated, persistent screenshot file.
 
-Blender за замовчуванням використовує горизонтальний FOV. Для його точного розрахунку ми використовуємо роздільну здатність скріншоту (Ширина x Висота) та вертикальний FOV з Google:
+### 1. Setup Screenshot Folder (Once)
+To speed up your workflow, configure your screenshot software (ShareX, Lightshot, standard Snipping Tool, etc.) so that when you press a hotkey, the screenshot is automatically saved to a specific folder with a consistent name, for example: `C:\Screenshots\maps_sync.png`. The old file must be overwritten.
+
+### 2. In Blender (Preparation)
+1.  Use **Blosm** to import 3D buildings and terrain for your target location.
+2.  Copy the BBox coordinates from the Blosm panel.
+
+### 3. Setup StreetView Add-on
+1.  Open the **StreetView** tab in the N-panel (Sidebar on the right).
+2.  Click **"Paste from Blosm"** to paste the bounding box coordinates.
+3.  In the **"Image Path"** field, select your persistent screenshot file `C:\Screenshots\maps_sync.png`.
+
+### 4. Synchronization
+1.  **In Browser:** Open Google Street View and find your desired perspective.
+2.  **Screenshot:** Press your screenshot hotkey (the `maps_sync.png` file updates on disk).
+3.  **URL:** Copy the URL from the browser's address bar.
+4.  **In Blender:** Paste the link into the add-on's **"Google URL"** field and click **"Створити камеру"** (Create Camera).
+
+*The add-on will instantly create the camera at the precise coordinates, tilt it, and load the updated screenshot as the background. Your 3D buildings will align perfectly with the photo.*
+
+---
+
+## 🧩 Technical Details (FOV Math)
+
+Google provides data in the format `@lat,lon,x,fy,h,t`. The key parameter is `fy` — the Vertical Field of View.
+
+Blender uses horizontal FOV by default. For an accurate match, we calculate the horizontal FOV using the screenshot's resolution (Width x Height) and the vertical FOV from Google:
 
 $$FOV_{hor} = 2 \times \arctan\left(\tan\left(\frac{FOV_{ver}}{2}\right) \times \frac{Width}{Height}\right)$$
 
-Аддон v1.7 автоматизує цей розрахунок, беручи Width та Height безпосередньо з файлу скріншоту.
+The v1.7 add-on automates this calculation, pulling Width and Height directly from the screenshot file.
 
 ---
 
-## 🤝 Зворотний зв'язок та внесок
+## 🤝 Feedback and Contribution
 
-Це стабільна версія аддону (v1.7). Якщо ви знайшли баг або маєте ідеї щодо покращення, будь ласка, створюйте **Issue** або подавайте **Pull Request**.
+This is the stable version of the add-on (v1.7). If you find a bug or have ideas for improvement, please create an **Issue** or submit a **Pull Request**.
 
 ---
 
-## 📜 Ліцензія
+## 📜 License
 
-Цей проект ліцензований на умовах ліцензії MIT — деталі див. у файлі [LICENSE](LICENSE).
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
