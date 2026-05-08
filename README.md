@@ -8,7 +8,7 @@ Instantly create a Blender camera matching the position, rotation, and Field of 
 
 ## 🚀 Installation
 
-1.  **Download** [Google_Camera_Import.zip](https://github.com/user-attachments/files/27537517/Google_Camera_Import.zip).
+1.  **Download** [Google_Camera_Import.zip](https://github.com/user-attachments/files/27538381/Google_Camera_Import.zip).
 2.  In Blender, go to `Edit` > `Preferences` > `Add-ons` > **Install...**
 3.  Select the file and **enable** the add-on.
 
