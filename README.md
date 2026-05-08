@@ -1,6 +1,6 @@
 # 📸 StreetView To Camera for Blender v4.0
 
-<img width="700" height="350" alt="StreetView To Camera Preview" src="https://github.com/user-attachments/assets/eb7f54fd-25fd-4197-b58d-40086742fe4d" />
+<img width="700" height="350" alt="Gemini_Generated_Image_9mh2bf9mh2bf9mh2" src="https://github.com/user-attachments/assets/5d74db68-ce82-4b31-87fc-8e92e62f8bcd" />
 
 Instantly create a Blender camera matching the position, rotation, and Field of View (FOV) of any Google Street View panorama. **Includes automatic vertical-to-horizontal FOV correction based on your screenshot's aspect ratio.**
 
