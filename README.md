@@ -16,7 +16,7 @@ Instantly create a Blender camera matching the position, rotation, and Field of 
 
 ## 🛠 Quick Start Workflow
 
-Best used with **Blosm** add-on (for 3D buildings) and a persistent screenshot file.
+Best used with **Blosm** https://github.com/vvoovv/blosm add-on (for 3D buildings) and a persistent screenshot file.
 
 1.  **Setup (Once):** Configure your screenshot software to auto-save and overwrite a specific file (e.g., `C:\Screenshots\sync.png`).
 2.  **Blender:** Import buildings via **Blosm**, copy the BBox coords, and paste them into the **StreetView** panel (N-panel). Select your `sync.png` as the **Image Path**.
