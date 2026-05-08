@@ -42,8 +42,9 @@ This add-on works best when paired with the **Blosm for Blender** add-on (for im
 To speed up your workflow, configure your screenshot software (ShareX, Lightshot, standard Snipping Tool, etc.) so that when you press a hotkey, the screenshot is automatically saved to a specific folder with a consistent name, for example: `C:\Screenshots\maps_sync.png`. The old file must be overwritten.
 
 ### 2. In Blender (Preparation)
-1.  Use **Blosm** to import 3D buildings and terrain for your target location.
-2.  Copy the BBox coordinates from the Blosm panel.
+1.Download and install addon:  [Google_Camera_Import.zip](https://github.com/user-attachments/files/27537517/Google_Camera_Import.zip)
+2.  Use **Blosm** to import 3D buildings and terrain for your target location.
+3.  Copy the BBox coordinates from the Blosm panel.
 
 ### 3. Setup StreetView Add-on
 1.  Open the **StreetView** tab in the N-panel (Sidebar on the right).
