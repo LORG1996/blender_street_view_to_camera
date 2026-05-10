@@ -6,7 +6,8 @@ Instantly create a Blender camera matching the position, rotation, and Field of 
 
 ---
 
-TUTORIAL HOW TO USE
+## 📺 Video Tutorial
+[![Video Tutorial](https://img.youtube.com/vi/FqP5FiTVVic/0.jpg)](https://www.youtube.com/watch?v=FqP5FiTVVic)
 
 ## ⚠️ MANDATORY REQUIREMENT
 
