@@ -29,8 +29,8 @@ To ensure the camera aligns correctly with real-world coordinates:
 Best used with the **Blosm** add-on (for 3D buildings) and a persistent screenshot file.
 
 1.  **Setup (Once):** Configure your screenshot software to auto-save and overwrite a specific file (e.g., `C:\Screenshots\sync.png`).
-2.  **Blender:** Import buildings via **Blosm**, **copy the BBox coords**, and paste them into the **StreetView** panel (N-panel). Select your `sync.png` as the **Image Path**.
-3.  **Sync:** Find a view in Google Street View, take a screenshot, copy the browser URL, paste it into Blender, and click **"Create Camera"** (Створити камеру).
+2.  **Blender:** Import buildings via **Blosm**, **copy the BBox coords**, and paste them into the **StreetView** panel (N-panel).
+3.  **Sync:** Find a view in Google Street View, take a screenshot, copy the browser URL, paste it into Blender **StreetView** panel (N-panel)., and click **"Create Camera"**.
 
 ---
 
