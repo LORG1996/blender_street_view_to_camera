@@ -6,6 +6,16 @@ Instantly create a Blender camera matching the position, rotation, and Field of 
 
 ---
 
+TUTORIAL HOW TO USE
+
+## ⚠️ MANDATORY REQUIREMENT
+
+To ensure the camera aligns correctly with real-world coordinates:
+*   The **[Blosm](https://github.com/vvoovv/blosm)** (formerly BlenderOSM) add-on **must** be installed.
+*   When loading the base (terrain or buildings) via **Blosm**, you **must copy the BBox (bounding box) coordinates** from the Blosm interface and paste them into this script's panel. This syncs the coordinate origin of both tools.
+
+---
+
 ## 🚀 Installation
 
 1.  **Download** [Google_Camera_Import.zip](https://github.com/user-attachments/files/27538381/Google_Camera_Import.zip).
@@ -16,11 +26,11 @@ Instantly create a Blender camera matching the position, rotation, and Field of 
 
 ## 🛠 Quick Start Workflow
 
-Best used with **Blosm** https://github.com/vvoovv/blosm add-on (for 3D buildings) and a persistent screenshot file.
+Best used with the **Blosm** add-on (for 3D buildings) and a persistent screenshot file.
 
 1.  **Setup (Once):** Configure your screenshot software to auto-save and overwrite a specific file (e.g., `C:\Screenshots\sync.png`).
-2.  **Blender:** Import buildings via **Blosm**, copy the BBox coords, and paste them into the **StreetView** panel (N-panel). Select your `sync.png` as the **Image Path**.
-3.  **Sync:** Find a view in Google Street View, take a screenshot, copy the browser URL, paste it into Blender, and click **"Створити камеру"** (Create Camera).
+2.  **Blender:** Import buildings via **Blosm**, **copy the BBox coords**, and paste them into the **StreetView** panel (N-panel). Select your `sync.png` as the **Image Path**.
+3.  **Sync:** Find a view in Google Street View, take a screenshot, copy the browser URL, paste it into Blender, and click **"Create Camera"** (Створити камеру).
 
 ---
 
